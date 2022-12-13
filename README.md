@@ -17,18 +17,18 @@ Buat program sederhana dengan mengaplikasikan penggunaan class. Buatlah class un
 - Commit dan push repository ke github.
 
 
-### Rumus :
+### Script :
     class mahasiswa:
-        def __init__(self, nim, nama, tugas, uts, uas):
-            self.nim = nim
+        def __init__(self, nama, nim, tugas, uts, uas):
             self.nama = nama
+            self.nim = nim
             self.tugas = tugas
             self.uts = uts
             self.uas = uas
 
-        def tambah(self,nim,nama,tugas,uts,uas):
-            data.nim.append(nim)
+        def tambah(self,nama,nim,tugas,uts,uas):
             data.nama.append(nama)
+            data.nim.append(nim)
             data.tugas.append(tugas)
             data.uts.append(uts)
             data.uas.append(uas)
@@ -43,16 +43,16 @@ Buat program sederhana dengan mengaplikasikan penggunaan class. Buatlah class un
                 print("  |", self.uas[i], " | ", end="")
                 print(f'{((self.tugas[i]*30/100) + (self.uts[i]*35/100) + (self.uas[i]*35/100)) :.2f}', " |")
 
-        def ubah(self,nim,nama,tugas,uts,uas):
-            self.nim[no] = nim
+        def ubah(self,nama,nim,tugas,uts,uas):
             self.nama[no] = nama
+            self.nim[no] = nim
             self.tugas[no] = tugas
             self.uts[no] = uts
             self.uas[no] = uas
 
         def hapus(self):
-            del self.nim[no]
             del self.nama[no]
+            del self.nim[no]
             del self.tugas[no]
             del self.uts[no]
             del self.uas[no]
@@ -64,8 +64,8 @@ Buat program sederhana dengan mengaplikasikan penggunaan class. Buatlah class un
         if menu == "t" or menu == "T":
            print("\nTambah Data")
            data.tambah(
-               input("Masukkan NIM : "),
                input("Masukkan Nama : "),
+               input("Masukkan NIM : "),
                int(input("Nilai Tugas : ")),
                int(input("Nilai UTS : ")),
                int(input("Nilai UAS : "))
@@ -116,44 +116,40 @@ Buat program sederhana dengan mengaplikasikan penggunaan class. Buatlah class un
         else:
             print("\nPerintah yang dimasukkan salah!\n")
             
-## Program :
 
-![Screenshot_20221213_135356](https://user-images.githubusercontent.com/115678171/207250000-b495eb18-3143-4193-854d-33148c7a661d.png)
-
-![Screenshot_20221213_135420](https://user-images.githubusercontent.com/115678171/207250029-eab8e3ea-62cb-4f35-ad24-a1ee7043ed6b.png)
-
-![Screenshot_20221213_135457](https://user-images.githubusercontent.com/115678171/207250521-b012e655-b53e-4ca2-9ae1-d4e11947d4e3.png)
-
-![Screenshot_20221213_135520](https://user-images.githubusercontent.com/115678171/207250547-900b9065-59b3-4055-a976-8e39c6892e89.png)
+![Screenshot (181)](https://user-images.githubusercontent.com/115794875/207289260-14ac4e97-61bc-4421-9acb-6e2890c01b78.png)
+![Screenshot (182)](https://user-images.githubusercontent.com/115794875/207289470-73177ec7-d6f9-40b9-bc8f-8c4dfae4caae.png)
+![Screenshot (183)](https://user-images.githubusercontent.com/115794875/207289538-c3b5180a-62dd-47f3-b61f-deff204adf9f.png)
+![Screenshot (184)](https://user-images.githubusercontent.com/115794875/207289599-2cf156a5-1e54-42bf-8779-d0fb2529096f.png)
 
 
 ## Hasil Run & Penjelasan Program :
-- Pertama kita mendeklarasikan sebuah class mahasiswa yang didalamnya terdapat atribut NIM, Nama, nilai tugas, nilai UTS dan nilai UAS. Jangan lupa, untuk mendeklarasikan sebuah class didalam OOP kita harus menggunakan **def__init__ dan juga self.**
+- Pertama kita mendeklarasikan sebuah class mahasiswa yang didalamnya terdapat atribut Nama, NIM, nilai tugas, nilai UTS dan nilai UAS. Jangan lupa, untuk mendeklarasikan sebuah class didalam OOP kita harus menggunakan **def__init__ dan juga self.**
 
       class mahasiswa:
-          def __init__(self, nim, nama, tugas, uts, uas):
-              self.nim = nim
+          def __init__(self, nama, nim, tugas, uts, uas):
               self.nama = nama
+              self.nim = nim
               self.tugas = tugas
               self.uts = uts
               self.uas = uas
 
-- Seperti biasa, deklarasikan satu dictionary kosong sebagai tempat menyimpan data-data yang sudah kita input. Ada 5 list kosong yang nantinya berisi NIM, Nama, nilai tugas, nilai UTS dan nilai UAS.
+- Seperti biasa, deklarasikan satu dictionary kosong sebagai tempat menyimpan data-data yang sudah kita input. Ada 5 list kosong yang nantinya berisi Nama, NIM, nilai tugas, nilai UTS dan nilai UAS.
 
       data = mahasiswa([],[],[],[],[])  
 
 - Kita akan buat beberapa method untuk menambahkan, menampilkan, menghapus, mengubah data mahasiswa. Pertama membuat method tambah(), method ini berfungsi untuk menambahkan data. Dalam method ini kita menggunakan append() supaya data yang terakhir ditambahkan ada di urutan list paling akhir.
 
-      def tambah(self,nim,nama,tugas,uts,uas):
-              data.nim.append(nim)
+      def tambah(self,nama,nim,tugas,uts,uas):
               data.nama.append(nama)
+              data.nim.append(nim)
               data.tugas.append(tugas)
               data.uts.append(uts)
               data.uas.append(uas)
 
 - Ini tampilan jika kita menginput method : `Tambah()`
 
-![Screenshot_20221213_135933](https://user-images.githubusercontent.com/115678171/207250612-88360501-2d93-484c-9447-55a100442709.png)
+![image](https://user-images.githubusercontent.com/115794875/207290191-5c8db60a-80f9-468f-a691-b22c00a992da.png)
 
 - Fungsi membuat method lihat() yaitu untuk menampilkan seluruh data yang sudah kita tambahkan tadi. Jika tidak ada data sama sekali, maka akan muncul tulisan **TIDAK ADA DATA.**
 
@@ -169,33 +165,37 @@ Buat program sederhana dengan mengaplikasikan penggunaan class. Buatlah class un
                   
 - Ini tampilan jika kita menginput method : `Lihat()`
 
-![Screenshot_20221213_135944](https://user-images.githubusercontent.com/115678171/207250676-cc3b0044-b5a8-402a-83a2-c42384ccc4c9.png)
+![image](https://user-images.githubusercontent.com/115794875/207290416-d32c1b2e-c7c8-44fa-b1cf-369047f4af5c.png)
 
 - Fungsi membuat method ubah() yaitu untuk mengubah data. jika method ini diinput, maka data Nama, NIM, nilai tugas, nilai UTS, nilai UAS index nomor - (no) akan diubah sesuai dengan inputan dari user. Index ke - (no) akan dicari secara otomatis sesuai dengan nama yang ingin diubah oleh user.
 
-      def ubah(self,nim,nama,tugas,uts,uas):
-              self.nim[no] = nim
+      def ubah(self,nama,nim,tugas,uts,uas):
               self.nama[no] = nama
+              self.nim[no] = nim
               self.tugas[no] = tugas
               self.uts[no] = uts
               self.uas[no] = uas
               
 - Ini tampilan jika kita menginput method : `Ubah()`
 
-![Screenshot_20221213_140022](https://user-images.githubusercontent.com/115678171/207250744-4d5931ae-79bc-4528-baba-e18e973e87f2.png)
+![image](https://user-images.githubusercontent.com/115794875/207290702-fa7555ff-19ff-4635-9116-bf1cff6180d4.png)
 
 - Terakhir kita membuat method hapus(), yang berfungsi untuk menghapus data berdasarkan nama. Kita bisa menggunakan del untuk menghapus datanya. Seperti sebelumnya, nomor index list yang akan dihapus disesuaikan dengan inputan dari user. Yaitu index nomor ke - (no).
 
       def hapus(self):
-              del self.nim[no]
               del self.nama[no]
+              del self.nim[no]
               del self.tugas[no]
               del self.uts[no]
               del self.uas[no]
               
 - Ini tampilan jika kita menginput method : `Hapus()`
 
-![Screenshot_20221213_140035](https://user-images.githubusercontent.com/115678171/207250792-e3446d28-e0ea-410e-9843-68e10df24990.png)
+![image](https://user-images.githubusercontent.com/115794875/207290874-4d8e2b02-3de2-48fa-97be-6a41cc2aaac7.png)
+
+- Ini tampilan jika kita menginput method : 'Keluar()'
+
+![image](https://user-images.githubusercontent.com/115794875/207291095-632cd1bf-2049-4cdd-911d-d740cb155070.png)
 
 
 ## Diagram Class Praktikum 8
@@ -204,6 +204,6 @@ Buat program sederhana dengan mengaplikasikan penggunaan class. Buatlah class un
 
 ## Flowchart Praktikum 8
 
-![Flowchart](https://user-images.githubusercontent.com/115678171/207250962-5e5694c8-4181-4fbb-b5b1-4e246d4f56e4.png)
+![flowchart22_page-0001](https://user-images.githubusercontent.com/115794875/207291238-450c7ecd-5f48-4ed2-a3b3-84cfbead1afd.jpg)
 
 ## Sekian, Terima kasih
